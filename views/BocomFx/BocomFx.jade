@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  div(class='content')
+    form(class='form-horizontal')
+      textarea(id='taReqContent', class='form-control', rows='15')
+      textarea(id='taResContent', class='form-control', rows='15')
+          
+      div(class='form-group')
+        div
+          button(id='btnSend', type='button', class='btn btn-primary') Send
+    
+block custom-script
+  script(src='/javascripts/BocomFx/BocomFx.js')
+  
+  

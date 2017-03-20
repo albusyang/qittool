@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  div(class='content')
+    form(class='form-horizontal')
+      textarea(id='taReqContent', class='form-control', rows='3')
+      textarea(id='taResContent', class='form-control', rows='3')
+      
+      div(class='form-group')
+        div(class='col-sm-offset-2 col-sm-10')
+          button(id='btnSend', type='button', class='btn btn-primary') Send
+          button(id='btnConnect' type='button' data-connect-text='Connect' data-disconnect-text='Disconnect' 
+            class='btn btn-success' autocomplete='off') Connect
+          span(id='lblConnectStatus' class='label label-warning') Disconnected
+    
+block custom-script
+  script(src='/javascripts/dimple/tradeConverter.js')
+  
+  

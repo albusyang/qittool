@@ -1,0 +1,48 @@
+extends ../layout
+
+block content
+  div(class='content')
+    button(id='btnConnect' type='button' data-connect-text='Connect' data-disconnect-text='Disconnect' 
+            class='btn btn-success' autocomplete='off') Connect
+    button(id='btnSubscribe', type='button', class='btn btn-primary') Subscribe
+
+    button(id='btnConnectTrade' type='button' data-connect-text='Connect Trade' data-disconnect-text='Disconnect Trade' 
+            class='btn btn-success' autocomplete='off') Connect Trade
+    
+    div(class='panel panel-info')
+      div(class='panel-heading')
+        h1(class='panel-title') SELL
+      div(class='panel-body')
+        button(id='btnSell' type='button' class='btn btn-lg') 000.00
+    div(class='panel panel-info')
+      div(class='panel-heading')
+        h1(class='panel-title') BUY
+      div(class='panel-body')
+        button(id='btnBuy' type='button' class='btn btn-lg') 000.00
+    
+    table(id='tblOrder', class='display')
+      thead
+        tr
+          th Time
+          th Id
+          th Message Type
+          th Action
+          th Body
+          th Success
+          th Error Message
+
+    table(id='tblMessage', class='display')
+      thead
+        tr
+          th Time
+          th Id
+          th Message Type
+          th Action
+          th Body
+          th Success
+          th Error Message
+
+block custom-script
+  script(src='/javascripts/QuantitativeHedgingPlatform/QuantitativeHedgingPlatform.js')
+  
+  

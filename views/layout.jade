@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/jquery.dataTables.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav(class='navbar navbar-inverse')
+      div(class='container-fluid')
+        div(class='navbar-header')
+          button(type='button', class='navbar-toggle collapsed', data-toggle='collapse', data-target='#navbar-1', aria-expanded='false')
+            span(class='sr-only') Toggle navigation
+            span(class='icon-bar')
+            span(class='icon-bar')
+            span(class='icon-bar')
+          a(class='navbar-brand', href='#') QIT
+        div(class='collapse navbar-collapse', id='navbar-1')
+          ul(class='nav navbar-nav')
+            li()
+              a(href='/dataservice') Data Service
+            li
+              a(href='/tradeservice') Trade Service
+            li(class='dropdown')
+              a(href='#', class='dropdown-toggle', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expand='false') Dimple
+                span(class='caret')
+              ul(class='dropdown-menu')
+                li
+                  a(href='/dimple/tradeConverter') Trade Converter
+                li
+                  a(href='/dimple/manualTrading') Manual Trading
+            li
+              a(href='/QuantitativeHedgingPlatform') Quantitative Hedging
+            li
+              a(href='/BocomFx') BOCOM FX
+              
+    block content
+    
+    script(src='/javascripts/jquery-1.12.4.min.js')
+    script(src='/javascripts/bootstrap.min.js')
+    script(src='/javascripts/socket.io.js')
+    script(src='/javascripts/jquery.dataTables.js')
+    
+    block custom-script
